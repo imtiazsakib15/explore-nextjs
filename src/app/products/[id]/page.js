@@ -1,7 +1,10 @@
-import React from "react";
+export const metadata = {
+  title: "Products",
+  description: "This is Products page",
+};
 
 const Product = ({ params, searchParams }) => {
-  console.log(params, searchParams);
+  // console.log(params, searchParams);
   return (
     <div>
       <h1 className="text-3xl font-bold">
