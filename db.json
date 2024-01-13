@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Introduction to JavaScript",
+      "description": "Learn the basics of JavaScript programming language.",
+      "likes_count": 120
+    },
+    {
+      "id": 2,
+      "title": "Healthy Eating Habits",
+      "description": "Discover the importance of maintaining a healthy diet.",
+      "likes_count": 85
+    },
+    {
+      "id": 3,
+      "title": "Traveling on a Budget",
+      "description": "Tips and tricks for exploring new places without breaking the bank.",
+      "likes_count": 200
+    },
+    {
+      "id": 4,
+      "title": "Getting Started with Python",
+      "description": "A beginner's guide to Python programming language.",
+      "likes_count": 150
+    },
+    {
+      "id": 5,
+      "title": "Effective Time Management",
+      "description": "Learn how to manage your time efficiently for increased productivity.",
+      "likes_count": 180
+    },
+    {
+      "id": 6,
+      "title": "Mindfulness Meditation Techniques",
+      "description": "Explore various mindfulness meditation practices for a calmer mind.",
+      "likes_count": 90
+    }
+  ]
+}
