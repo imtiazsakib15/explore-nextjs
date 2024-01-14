@@ -1,10 +1,12 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "Blogs",
   description: "This is blog page",
 };
 
 const BlogPage = async () => {
-  // Incremental Static Regeneration(ISR) 
+  // Incremental Static Regeneration(ISR)
   // const res = await fetch("http://localhost:5000/posts", {
   //   next: {
   //     revalidate: 5,
@@ -26,9 +28,15 @@ const BlogPage = async () => {
           <div className="bg-slate-700 rounded p-5 text-white" key={blog.id}>
             <h3 className="text-2xl font-semibold">{blog.title}</h3>
             <p>{blog.description}</p>
-            <p className="text-blue-600 font-medium">
+            <p className="text-blue-600 font-medium pb-6">
               Likes: {blog.likes_count}
             </p>
+            <Link
+              className="px-5 py-2 bg-green-700 text-white"
+              href={`/blogs/${blog.id}`}
+            >
+              See Details
+            </Link>
           </div>
         ))}
       </div>
