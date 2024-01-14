@@ -4,13 +4,13 @@
       "id": 1,
       "title": "Introduction to JavaScript",
       "description": "Learn the basics of JavaScript programming language.",
-      "likes_count": 120
+      "likes_count": 160
     },
     {
       "id": 2,
       "title": "Healthy Eating Habits",
       "description": "Discover the importance of maintaining a healthy diet.",
-      "likes_count": 85
+      "likes_count": 100
     },
     {
       "id": 3,

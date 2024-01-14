@@ -4,11 +4,16 @@ export const metadata = {
 };
 
 const BlogPage = async () => {
-  // ISR : normally used in E-commerce websites
+  // Incremental Static Regeneration(ISR) 
+  // const res = await fetch("http://localhost:5000/posts", {
+  //   next: {
+  //     revalidate: 5,
+  //   },
+  // });
+
+  // Server Side Rendering(SSR)
   const res = await fetch("http://localhost:5000/posts", {
-    next: {
-      revalidate: 5,
-    },
+    cache: "no-cache",
   });
   const blogs = await res.json();
   // console.log(blogs);
