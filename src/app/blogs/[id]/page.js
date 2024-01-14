@@ -1,10 +1,22 @@
 import Link from "next/link";
 
+export const generateStaticParams = async () => {
+  const res = await fetch(`http://localhost:5000/posts`);
+  const blogs = await res.json();
+  const ids = blogs.map((blog) => {
+    return {
+      id: blog.id,
+    };
+  });
+//   console.log(ids);
+  return ids;
+};
+
 const BlogDetailsPage = async ({ params }) => {
   const id = params.id;
   const res = await fetch(`http://localhost:5000/posts/${id}`);
   const blog = await res.json();
-//   console.log(blog);
+  //   console.log(blog);
 
   return (
     <div className="max-w-3xl mx-auto">
