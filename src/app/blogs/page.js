@@ -4,8 +4,11 @@ export const metadata = {
 };
 
 const BlogPage = async () => {
+  // ISR : normally used in E-commerce websites
   const res = await fetch("http://localhost:5000/posts", {
-    cache: "force-cache",
+    next: {
+      revalidate: 5,
+    },
   });
   const blogs = await res.json();
   // console.log(blogs);
@@ -18,6 +21,9 @@ const BlogPage = async () => {
           <div className="bg-slate-700 rounded p-5 text-white" key={blog.id}>
             <h3 className="text-2xl font-semibold">{blog.title}</h3>
             <p>{blog.description}</p>
+            <p className="text-blue-600 font-medium">
+              Likes: {blog.likes_count}
+            </p>
           </div>
         ))}
       </div>
