@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "./blogs.module.css";
 
 export const metadata = {
   title: "Blogs",
@@ -22,7 +23,7 @@ const BlogPage = async () => {
 
   return (
     <div className="max-w-5xl mx-auto">
-      <h1 className="text-4xl font-bold text-center py-6">Blogs</h1>
+      <h1 className={styles.header_text}>Blogs</h1>
       <div className="grid sm:grid-cols-2 gap-6">
         {blogs?.map((blog) => (
           <div className="bg-slate-700 rounded p-5 text-white" key={blog.id}>
