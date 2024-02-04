@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import NavLinks from "@/components/NavLinks/NavLinks";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +12,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="space-x-4 mx-auto w-max mt-12">
+          <NavLinks />
+        </div>
+        {children}
+      </body>
     </html>
   );
 }

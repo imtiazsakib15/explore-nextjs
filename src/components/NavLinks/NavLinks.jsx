@@ -18,22 +18,19 @@ const NavLinks = () => {
   ];
   return (
     <>
-      {links.map((link) => {
-        const isActive = pathname.startsWith(link.route);
-        return (
-          <Link
-            key={link.pathname}
-            className={
-              isActive
-                ? "px-4 py-2 bg-green-600 text-white"
-                : "px-4 py-2 bg-slate-200"
-            }
-            href={link.route}
-          >
-            {link.pathname}
-          </Link>
-        );
-      })}
+      {links.map((link) => (
+        <Link
+          key={link.pathname}
+          className={
+            pathname === link.route
+              ? "px-4 py-2 bg-green-600 text-white"
+              : "px-4 py-2 bg-slate-200"
+          }
+          href={link.route}
+        >
+          {link.pathname}
+        </Link>
+      ))}
     </>
   );
 };
