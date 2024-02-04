@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Products",
+  title: "Dynamic product",
   description: "This is Products page",
 };
 
