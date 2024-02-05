@@ -15,6 +15,7 @@ const NavLinks = () => {
     { pathname: "Contact", route: "/contact" },
     { pathname: "Projects", route: "/projects" },
     { pathname: "Skills", route: "/skills" },
+    { pathname: "Dashboard", route: "/dashboard" },
   ];
   return (
     <>
